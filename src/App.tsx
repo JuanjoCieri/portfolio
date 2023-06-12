@@ -2,7 +2,9 @@ import React, { useRef } from 'react'
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import reactsvg from "./assets/react.svg"
 import tailwindcss from "./assets/tailwind.svg"
-import Main from "./components/Main.jsx"
+import typescript from "./assets/typescript.svg"
+import Page1 from "./pages/page1/Page1"
+import Page2 from './pages/page2/Page2'
 
 const url = (name: string, wrap = false) =>
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -28,10 +30,11 @@ export default function App() {
         <ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
           <img src={url('satellite4')} style={{ width: '15%', marginLeft: '70%' }} />
         </ParallaxLayer>
+        
 
-        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.1 }}>
+        <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.4 }}>
           <img src={reactsvg} style={{ display: 'block', width: '20%', marginLeft: '55%' }} />
-          <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
+          <img src={typescript} style={{ display: 'block', width: '10%', marginLeft: '15%' }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
@@ -42,6 +45,8 @@ export default function App() {
         <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
           <img src={url('cloud')} style={{ display: 'block', width: '10%', marginLeft: '10%' }} />
           <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '75%' }} />
+          <img src={url('cloud')} style={{ display: 'block', width: '20%', marginLeft: '45%' }} />
+
         </ParallaxLayer>
 
         <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
@@ -80,13 +85,14 @@ export default function App() {
         <ParallaxLayer
           offset={0}
           speed={0.1}
-          onClick={() => parallax.current.scrollTo(1)}
+
           style={{
             display: 'flex',
+            flexDirection: "column",
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <Main />
+            <Page1 />
           {/* <img src={url('server')} style={{ width: '20%' }} /> */}
         </ParallaxLayer>
 
@@ -99,7 +105,7 @@ export default function App() {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <img src={url('bash')} style={{ width: '40%' }} />
+            <Page2 />
         </ParallaxLayer>
 
         <ParallaxLayer
