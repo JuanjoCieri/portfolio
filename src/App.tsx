@@ -5,6 +5,7 @@ import tailwindcss from "./assets/tailwind.svg"
 import typescript from "./assets/typescript.svg"
 import Page1 from "./pages/page1/Page1"
 import Page2 from './pages/page2/Page2'
+import Page3 from './pages/page3/Page3'
 
 const url = (name: string, wrap = false) =>
   `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
@@ -117,7 +118,7 @@ export default function App() {
             justifyContent: 'center',
           }}
           onClick={() => parallax.current.scrollTo(0)}>
-          <img src={url('clients-main')} style={{ width: '40%' }} />
+          <Page3 />
         </ParallaxLayer>
       </Parallax>
     </div>
