@@ -13,9 +13,10 @@ export default function App() {
   const parallax = useRef<IParallax>(null!)
   return (
     <div style={{ width: '100%', height: '100%', background: '#253237' }}>
-      <Parallax ref={parallax} pages={3}>
+      <Parallax ref={parallax} pages={4}>
         <ParallaxLayer offset={1} speed={1} style={{ backgroundColor: '#805E73' }} />
         <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: '#87BCDE' }} />
+        <ParallaxLayer offset={3} speed={1} style={{ backgroundColor: '#ABCDAB' }} />
 
         <ParallaxLayer
           offset={0}
@@ -119,6 +120,22 @@ export default function App() {
           onClick={() => parallax.current.scrollTo(0)}>
           <img src={url('clients-main')} style={{ width: '40%' }} />
         </ParallaxLayer>
+        
+        <ParallaxLayer offset={3.5} speed={0.5} style={{ opacity: 0.6 }}>
+          <img src="tu-imagen-url" style={{ display: 'block', width: '30%', marginLeft: '35%' }} />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={0.1}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <div>Tu texto aquí</div>
+        </ParallaxLayer>
+
       </Parallax>
     </div>
   )
