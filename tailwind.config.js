@@ -8,6 +8,8 @@ export default {
     extend: {
       animation: {
         text: "text 5s ease infinite",
+        flip: "flip 6s infinite steps(2, end)",
+        rotate: "rotate 3s linear infinite both",
       },
       keyframes: {
         text: {

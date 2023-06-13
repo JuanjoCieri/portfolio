@@ -9,7 +9,7 @@ export default function WindowMock() {
         <span className="w-3 h-3 border-2 border-transparent dark:border-green-400 rounded-full bg-green-400 dark:bg-transparent"></span>
       </div>
       <div className="bg-gray-100 dark:bg-gray-700 border-t-0 w-full h-[430px] lg:h-[384px] rounded-b-lg p-3 flex flex-col lg:flex-row">
-        <div className="w-full lg:w-2/3 h-full flex flex-col items-start justify-center">
+        <div className="w-full lg:w-2/3 h-full flex flex-col items-start">
           <AboutMe />
         </div>
         <div className="w-full lg:w-1/3">
