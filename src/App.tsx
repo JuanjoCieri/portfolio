@@ -6,6 +6,10 @@ import typescript from "./assets/typescript.svg";
 import Page1 from "./pages/page1/Page1";
 import Page2 from "./pages/page2/Page2";
 import Page3 from "./pages/page3/Page3";
+import Page4 from "./pages/page4/Page4";
+import Page5 from "./pages/page5/Page5";
+import planet1 from "./assets/planet1.png"
+import moon from "./assets/moon.png"
 import WindowMockMin from "./components/WindowMockMin";
 
 const url = (name: string, wrap = false) =>
@@ -28,7 +32,7 @@ export default function App() {
         <ParallaxLayer
           offset={2}
           speed={1}
-          style={{ backgroundColor: "#87BCDE" }}
+          style={{ backgroundColor: "#AA8F24" }}
         />
         <ParallaxLayer
           offset={3}
@@ -43,13 +47,13 @@ export default function App() {
         <ParallaxLayer
           offset={5}
           speed={1}
-          style={{ backgroundColor: "#POCDAB" }}
+          style={{ backgroundColor: "#87BCDE" }}
         />
 
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={3}
+          factor={5}
           style={{
             backgroundImage: url("stars", true),
             backgroundSize: "cover",
@@ -64,6 +68,28 @@ export default function App() {
           <img
             src={url("satellite4")}
             style={{ width: "15%", marginLeft: "70%" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={3}
+          speed={-0.3}
+          style={{ pointerEvents: "none", opacity: 0.7 }}
+        >
+          <img
+            src={planet1}
+            style={{ width: "25%", marginLeft: "10%" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={4}
+          speed={-0.3}
+          style={{ pointerEvents: "none", opacity: 0.7 }}
+        >
+          <img
+            src={moon}
+            style={{ width: "25%", marginLeft: "85%" }}
           />
         </ParallaxLayer>
 
@@ -130,8 +156,64 @@ export default function App() {
           />
         </ParallaxLayer>
 
+        <ParallaxLayer offset={3.2} speed={-0.1} style={{ opacity: 0.4 }}>
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "20%", marginLeft: "60%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "25%", marginLeft: "30%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "10%", marginLeft: "80%" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3.8} speed={-0.1} style={{ opacity: 0.4 }}>
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "20%", marginLeft: "10%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "25%", marginLeft: "30%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "10%", marginLeft: "80%" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={4.5} speed={0.4} style={{ opacity: 0.6 }}>
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "20%", marginLeft: "5%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "15%", marginLeft: "75%" }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={5} speed={-0.1} style={{ opacity: 0.4 }}>
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "20%", marginLeft: "10%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "25%", marginLeft: "30%" }}
+          />
+          <img
+            src={url("cloud")}
+            style={{ display: "block", width: "10%", marginLeft: "80%" }}
+          />
+        </ParallaxLayer>
+
         <ParallaxLayer
-          offset={2.5}
+          offset={5.5}
           speed={-0.4}
           style={{
             display: "flex",
@@ -207,7 +289,7 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <Page3 />
+          <Page4 />
         </ParallaxLayer>
 
         <ParallaxLayer offset={4.5} speed={0.5} style={{ opacity: 0.6 }}>
@@ -226,7 +308,7 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <Page3 />
+          <Page5 />
         </ParallaxLayer>
 
         <ParallaxLayer offset={5.5} speed={0.5} style={{ opacity: 0.6 }}>
@@ -245,7 +327,9 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <div>Tu texto aquí</div>
+          <div>
+            <p className="text-3xl font-bold text-gray-700 ">Contact me</p>
+          </div>
         </ParallaxLayer>
         
       </Parallax>
