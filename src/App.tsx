@@ -11,6 +11,7 @@ import Page5 from "./pages/page5/Page5";
 import planet1 from "./assets/planet1.png"
 import moon from "./assets/moon.png"
 import WindowMockMin from "./components/WindowMockMin";
+import Footer from "./components/Footer";
 
 const url = (name: string, wrap = false) =>
   `${
@@ -312,10 +313,7 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={5.5} speed={0.5} style={{ opacity: 0.6 }}>
-          <img
-            src="tu-imagen-url"
-            style={{ display: "block", width: "30%", marginLeft: "35%" }}
-          />
+         
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -327,9 +325,7 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-          <div>
-            <p className="text-3xl font-bold text-gray-700 ">Contact me</p>
-          </div>
+<Footer />
         </ParallaxLayer>
         
       </Parallax>

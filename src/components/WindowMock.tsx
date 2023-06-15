@@ -7,6 +7,8 @@ type ProjectProps = {
   projectImage: string;
   projectStack: Array<any>;
   projectDate: string;
+  projectRepo: string;
+  projectDeploy: string;
 };
 
 export default function WindowMock({
@@ -15,6 +17,8 @@ export default function WindowMock({
   projectImage,
   projectStack,
   projectDate,
+  projectRepo,
+  projectDeploy,
 }: ProjectProps) {
   const [show, setShow] = useState(false);
   function showDetail() {
@@ -47,13 +51,11 @@ export default function WindowMock({
             <div className="border my-4"></div>
             <div className="w-[100%] flex justify-start items-center flex-wrap gap-1 lg:gap-3">
               {projectStack.map((tec) => (
-                <p className="font-medium text-gray-700">
-                  {tec} -
-                </p>
+                <p className="font-medium text-gray-700">{tec} -</p>
               ))}
             </div>
             <div className="w-full h-full bottom-0 py-3 flex justify-end items-end gap-4">
-              <a className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
+              <a href={projectDeploy} className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -70,7 +72,7 @@ export default function WindowMock({
                 </svg>
                 <span>Deploy</span>
               </a>
-              <a className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
+              <a href={projectRepo} className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

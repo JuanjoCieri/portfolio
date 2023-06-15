@@ -10,6 +10,8 @@ export default function Main() {
         projectImage={nobgapp}
         projectStack={["React", "TailwindCSS", "Axios", "Cloudinary API"]}
         projectDate="Apr 2023"
+        projectRepo="https://github.com/JuanjoCieri/no-bg-app"
+        projectDeploy="https://no-bg-app.vercel.app/"
       />
     </>
   );

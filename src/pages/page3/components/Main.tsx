@@ -11,6 +11,8 @@ export default function Main() {
         projectImage={projectImage}
         projectStack={["React", "Express", "NodeJS", "Socket.io", "MongoDB"]}
         projectDate="Sept 2022"
+        projectRepo="https://github.com/Final-Proyect-PETS/PROYECTO-FINAL-PETS"
+        projectDeploy="https://happytails.vercel.app/"
       />
     </>
   );
