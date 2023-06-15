@@ -42,16 +42,16 @@ export default function WindowMock({
             </div>
           </div>
           <div className="bg-gray-100 dark:bg-gray-700 border-t-0 w-[100%] h-[430px] lg:h-[384px] rounded-b-lg p-3 flex flex-col">
-            <p className="font-bold text-gray-700 text-2xl">
+            <p className="font-bold text-gray-700 dark:text-gray-200 text-2xl">
               {projectName} | {projectDate}
             </p>
             <div className="border my-4"></div>
-            <p className="text-gray-600 font-medium">{projectDesc}</p>
-            <p className="font-bold text-gray-700 text-2xl lg:mt-5">Stack</p>
+            <p className="text-gray-600 dark:text-gray-300 font-medium">{projectDesc}</p>
+            <p className="font-bold text-gray-700 dark:text-gray-200 text-2xl lg:mt-5">Stack</p>
             <div className="border my-4"></div>
             <div className="w-[100%] flex justify-start items-center flex-wrap gap-1 lg:gap-3">
               {projectStack.map((tec) => (
-                <p className="font-medium text-gray-700">{tec} -</p>
+                <p className="font-medium text-gray-700 dark:text-gray-300">{tec} -</p>
               ))}
             </div>
             <div className="w-full h-full bottom-0 py-3 flex justify-end items-end gap-4">
