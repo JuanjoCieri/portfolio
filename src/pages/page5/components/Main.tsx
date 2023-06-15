@@ -18,7 +18,7 @@ export default function Main() {
         ]}
         projectDate="Jun 2023"
         projectRepo="https://github.com/cierusic"
-        projectDeploy="https://github.com/JuanjoCieri"
+        projectDeploy="https://cierusic.vercel.app/"
       />
     </>
   );
