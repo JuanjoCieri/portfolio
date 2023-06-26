@@ -8,10 +8,11 @@ import Page2 from "./pages/page2/Page2";
 import Page3 from "./pages/page3/Page3";
 import Page4 from "./pages/page4/Page4";
 import Page5 from "./pages/page5/Page5";
-import planet1 from "./assets/planet1.png"
-import moon from "./assets/moon.png"
+import planet1 from "./assets/planet1.png";
+import moon from "./assets/moon.png";
 import WindowMockMin from "./components/WindowMockMin";
 import Footer from "./components/Footer";
+import Page6 from "./pages/page6/Page6";
 
 const url = (name: string, wrap = false) =>
   `${
@@ -24,7 +25,7 @@ export default function App() {
   const parallax = useRef<IParallax>(null!);
   return (
     <div style={{ width: "100%", height: "100%", background: "#253237" }}>
-      <Parallax ref={parallax} pages={6}>
+      <Parallax ref={parallax} pages={7}>
         <ParallaxLayer
           offset={1}
           speed={1}
@@ -47,6 +48,11 @@ export default function App() {
         />
         <ParallaxLayer
           offset={5}
+          speed={1}
+          style={{ backgroundColor: "#87BCDE" }}
+        />
+        <ParallaxLayer
+          offset={6}
           speed={1}
           style={{ backgroundColor: "#87BCDE" }}
         />
@@ -77,10 +83,7 @@ export default function App() {
           speed={-0.3}
           style={{ pointerEvents: "none", opacity: 0.7 }}
         >
-          <img
-            src={planet1}
-            style={{ width: "25%", marginLeft: "10%" }}
-          />
+          <img src={planet1} style={{ width: "25%", marginLeft: "10%" }} />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -88,10 +91,7 @@ export default function App() {
           speed={-0.3}
           style={{ pointerEvents: "none", opacity: 0.7 }}
         >
-          <img
-            src={moon}
-            style={{ width: "25%", marginLeft: "85%" }}
-          />
+          <img src={moon} style={{ width: "25%", marginLeft: "85%" }} />
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.8} style={{ opacity: 0.4 }}>
@@ -229,9 +229,7 @@ export default function App() {
         {/* HAPPY TAILS PROJECT */}
 
         <ParallaxLayer offset={2.3} speed={-0.3} style={{}}>
-          <WindowMockMin
-            projectName="HappyTails"
-          />
+          <WindowMockMin projectName="HappyTails" />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -312,9 +310,11 @@ export default function App() {
           <Page5 />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={5.5} speed={0.5} style={{ opacity: 0.6 }}>
-         
-        </ParallaxLayer>
+        <ParallaxLayer
+          offset={5.5}
+          speed={0.5}
+          style={{ opacity: 0.6 }}
+        ></ParallaxLayer>
 
         <ParallaxLayer
           offset={5}
@@ -325,9 +325,26 @@ export default function App() {
             justifyContent: "center",
           }}
         >
-<Footer />
+          <Page6 />
         </ParallaxLayer>
-        
+
+        <ParallaxLayer
+          offset={6.5}
+          speed={0.5}
+          style={{ opacity: 0.6 }}
+        ></ParallaxLayer>
+
+        <ParallaxLayer
+          offset={6}
+          speed={0.1}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Footer />
+        </ParallaxLayer>
       </Parallax>
     </div>
   );
