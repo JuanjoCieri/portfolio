@@ -42,9 +42,13 @@ export default function WindowMock({
             </div>
           </div>
           <div className="bg-gray-100 dark:bg-gray-700 border-t-0 w-[100%] h-[430px] lg:h-[384px] rounded-b-lg p-3 flex flex-col">
+            <div className="flex justify-between items-center">
+
             <p className="font-bold text-gray-700 dark:text-gray-200 text-2xl">
               {projectName} | {projectDate}
             </p>
+            <p className="bg-yellow-400 font-bold text-xl px-3 rounded-xl curs" onClick={showDetail}>Volver</p>
+            </div>
             <div className="border my-4"></div>
             <p className="text-gray-600 dark:text-gray-300 font-medium">{projectDesc}</p>
             <p className="font-bold text-gray-700 dark:text-gray-200 text-2xl lg:mt-5">Stack</p>
@@ -55,7 +59,7 @@ export default function WindowMock({
               ))}
             </div>
             <div className="w-full h-full bottom-0 py-3 flex justify-end items-end gap-4">
-              <a href={projectDeploy} className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
+              <a href={projectDeploy} target="_blank" rel="noopener noreferrer" className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -72,7 +76,7 @@ export default function WindowMock({
                 </svg>
                 <span>Deploy</span>
               </a>
-              <a href={projectRepo} className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
+              <a href={projectRepo} target="_blank" rel="noopener noreferrer" className="bg-yellow-200 text-gray-700 font-medium flex justify-center items-center py-1 px-3 rounded-lg gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
